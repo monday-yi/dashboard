@@ -98,7 +98,7 @@ function render(d) {
   }
   html += '</div>';
 
-  // Queue
+  // Queue (moved before system)
   html += '<div class="card"><h2>📋 承诺队列</h2>';
   if (d.queue && d.queue.length > 0) {
     d.queue.forEach(q => {
@@ -112,16 +112,31 @@ function render(d) {
   }
   html += '</div>';
 
-  // Cron table
-  html += '<div class="card full-width"><h2>⏰ Cron 任务</h2>';
-  if (d.crons && d.crons.length > 0) {
+  // Cron - split recurring vs one-time
+  const recurCrons = (d.crons || []).filter(c => c.status !== 'pending');
+  const onceCrons = (d.crons || []).filter(c => c.status === 'pending');
+
+  html += '<div class="card full-width"><h2>⏰ 循环任务</h2>';
+  if (recurCrons.length > 0) {
     html += '<table class="cron-table"><tr><th>任务</th><th>状态</th><th>频率</th><th>失败</th></tr>';
-    d.crons.forEach(c => {
+    recurCrons.forEach(c => {
       html += `<tr><td>${c.name}</td><td>${statusIcon(c.status)}</td><td>${c.freq}</td><td>${c.fails}</td></tr>`;
     });
     html += '</table>';
   } else {
-    html += '<div class="empty">无 cron 任务</div>';
+    html += '<div class="empty">无循环任务</div>';
+  }
+  html += '</div>';
+
+  html += '<div class="card full-width"><h2>📌 一次性任务</h2>';
+  if (onceCrons.length > 0) {
+    html += '<table class="cron-table"><tr><th>任务</th><th>状态</th><th>触发时间</th><th>失败</th></tr>';
+    onceCrons.forEach(c => {
+      html += `<tr><td>${c.name}</td><td>${statusIcon(c.status)}</td><td>${c.freq}</td><td>${c.fails}</td></tr>`;
+    });
+    html += '</table>';
+  } else {
+    html += '<div class="empty">无一次性任务</div>';
   }
   html += '</div>';
 
