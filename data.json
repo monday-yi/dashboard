@@ -1,95 +1,91 @@
 {
-  "updated": "2026-02-23T06:31:38+08:00",
+  "updated": "2026-02-23T07:00:42+08:00",
   "alerts": [
     "[sessions-send] health=degraded, success_rate=0.00%, queue_pending=0"
   ],
   "contexts": [
     {
-      "name": "Monday",
+      "name": "Monday #monday (147480)",
       "pct": 53.2
     },
     {
-      "name": "Monday",
+      "name": "Monday webchat",
       "pct": 41.4
     },
     {
-      "name": "Monday",
+      "name": "Monday #monday (147286)",
       "pct": 39.1
     },
     {
-      "name": "Monday",
+      "name": "会议室",
       "pct": 33.5
     },
     {
-      "name": "Coder",
+      "name": "Cron: 灰度采样报告",
       "pct": 19.2
     },
     {
-      "name": "Coder",
+      "name": "Coder #coder",
       "pct": 17.3
     },
     {
-      "name": "Echo",
+      "name": "Cron: 博主简报",
       "pct": 14.6
     },
     {
-      "name": "Echo",
+      "name": "Cron: Memory 周整理",
       "pct": 10.4
     },
     {
-      "name": "Monday",
+      "name": "日报",
       "pct": 10.1
     },
     {
-      "name": "Coder",
-      "pct": 9.7
-    },
-    {
-      "name": "Echo",
+      "name": "Cron: Cron 审计报告",
       "pct": 9.5
     },
     {
-      "name": "Echo",
+      "name": "Cron: 晨报",
       "pct": 8.7
     },
     {
-      "name": "Coder",
-      "pct": 6.8
+      "name": "Cron: Coder 自驱巡检",
+      "pct": 8.1
     },
     {
-      "name": "Echo",
+      "name": "Cron: GitHub Issue 巡查",
       "pct": 6.6
     },
     {
-      "name": "Coder",
+      "name": "Coder #monday",
       "pct": 6.3
     },
     {
-      "name": "Coder",
+      "name": "Coder 会议室",
       "pct": 6.2
     },
     {
-      "name": "Echo",
+      "name": "Cron: Phoenix 备份",
       "pct": 6.1
     },
     {
-      "name": "Echo",
+      "name": "Echo #echo",
       "pct": 5.9
     },
     {
-      "name": "Echo",
+      "name": "Echo 会议室",
       "pct": 5.8
     },
     {
-      "name": "Echo",
+      "name": "Echo #monday",
       "pct": 5.8
     },
     {
-      "name": "Echo",
+      "name": "Cron: 承诺追踪巡检",
       "pct": 5.8
     },
     {
-      "name": "Echo",
+      "name": "Cron: 健康检测",
       "pct": 5.7
     }
   ],
