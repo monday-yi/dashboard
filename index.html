@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🎋 Monday Dashboard</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#111827;color:#e5e7eb;padding:12px;max-width:900px;margin:0 auto}
+h1{font-size:18px;color:#60a5fa;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+h1 .refresh{font-size:12px;color:#6b7280;cursor:pointer;padding:2px 8px;border:1px solid #374151;border-radius:4px}
+h1 .refresh:hover{color:#e5e7eb;border-color:#60a5fa}
+.alert-box{margin-bottom:10px}
+.alert{background:#7f1d1d;border:1px solid #f87171;border-radius:6px;padding:8px 12px;margin-bottom:6px;font-size:12px;color:#fca5a5}
+.alert strong{color:#f87171}
+.no-alert{background:#064e3b;border:1px solid #34d399;border-radius:6px;padding:8px 12px;font-size:12px;color:#6ee7b7}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+.card{background:#1f2937;border-radius:8px;padding:12px;border:1px solid #374151}
+.card h2{font-size:12px;color:#9ca3af;margin-bottom:8px;text-transform:uppercase;letter-spacing:1px}
+.bar-wrap{margin:5px 0}
+.bar-label{display:flex;justify-content:space-between;font-size:12px;margin-bottom:2px}
+.bar-label .name{color:#d1d5db;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:70%}
+.bar-label .pct{font-weight:600}
+.bar-bg{height:7px;background:#374151;border-radius:4px;overflow:hidden}
+.bar-fill{height:100%;border-radius:4px;transition:width .3s}
+.green{background:#34d399}.yellow{background:#fbbf24}.red{background:#f87171}
+.cron-table{width:100%;font-size:11px;border-collapse:collapse}
+.cron-table th{text-align:left;color:#6b7280;padding:3px 4px;border-bottom:1px solid #374151}
+.cron-table td{padding:3px 4px;border-bottom:1px solid #1f2937}
+.status-ok{color:#34d399}.status-warn{color:#fbbf24}.status-err{color:#f87171}
+.queue-item{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid #374151;font-size:12px}
+.queue-item:last-child{border:none}
+.owner{color:white;padding:1px 5px;border-radius:3px;font-size:10px}
+.owner-monday{background:#3b82f6}.owner-coder{background:#f59e0b}.owner-echo{background:#8b5cf6}
+.deadline{color:#9ca3af;white-space:nowrap}
+.stat-row{display:flex;justify-content:space-between;padding:3px 0;font-size:12px;border-bottom:1px solid #374151}
+.stat-row:last-child{border:none}
+.stat-val{font-weight:600;color:#60a5fa}
+.full-width{grid-column:1/-1}
+.ts{font-size:11px;color:#6b7280;text-align:right;margin-top:8px}
+.empty{color:#6b7280;font-size:12px;padding:8px 0}
+.phase-done{color:#34d399}.phase-wip{color:#fbbf24}.phase-queue{color:#6b7280}
+</style>
+</head>
+<body>
+
+<h1>🎋 Monday Dashboard <span class="refresh" onclick="loadData()">↻ 刷新</span></h1>
+<div id="alerts" class="alert-box"></div>
+<div class="grid" id="grid"></div>
+<div class="ts" id="ts"></div>
+
+<script>
+const DATA_URL = 'data.json';
+
+function pctColor(p) { return p >= 70 ? 'red' : p >= 50 ? 'yellow' : 'green'; }
+function pctHex(p) { return p >= 70 ? '#f87171' : p >= 50 ? '#fbbf24' : '#34d399'; }
+function statusIcon(s) {
+  if (s === 'ok') return '<span class="status-ok">✅</span>';
+  if (s === 'pending') return '<span class="status-warn">⏳</span>';
+  return '<span class="status-err">❌</span>';
+}
+function ownerClass(o) {
+  const k = o.toLowerCase();
+  if (k.includes('monday') || k.includes('mon')) return 'owner-monday';
+  if (k.includes('coder') || k.includes('cod')) return 'owner-coder';
+  if (k.includes('echo')) return 'owner-echo';
+  return 'owner-monday';
+}
+function phaseLabel(s) {
+  if (s === 'done') return '<span class="phase-done">✅ 完成</span>';
+  if (s === 'in_progress') return '<span class="phase-wip">⏳ 进行中</span>';
+  return '<span class="phase-queue">排队中</span>';
+}
+
+function render(d) {
+  // Alerts
+  const ab = document.getElementById('alerts');
+  if (d.alerts && d.alerts.length > 0) {
+    ab.innerHTML = d.alerts.map(a => `<div class="alert"><strong>⚠️</strong> ${a}</div>`).join('');
+  } else {
+    ab.innerHTML = '<div class="no-alert">✅ 一切正常，无告警</div>';
+  }
+
+  let html = '';
+
+  // Context bars
+  html += '<div class="card"><h2>📊 上下文占比</h2>';
+  if (d.contexts && d.contexts.length > 0) {
+    d.contexts.forEach(c => {
+      html += `<div class="bar-wrap">
+        <div class="bar-label"><span class="name">${c.name}</span><span class="pct" style="color:${pctHex(c.pct)}">${c.pct}%</span></div>
+        <div class="bar-bg"><div class="bar-fill ${pctColor(c.pct)}" style="width:${Math.min(c.pct,100)}%"></div></div>
+      </div>`;
+    });
+  } else {
+    html += '<div class="empty">暂无数据</div>';
+  }
+  html += '</div>';
+
+  // Queue
+  html += '<div class="card"><h2>📋 承诺队列</h2>';
+  if (d.queue && d.queue.length > 0) {
+    d.queue.forEach(q => {
+      html += `<div class="queue-item">
+        <div><span class="owner ${ownerClass(q.owner)}">${q.owner}</span> ${q.desc}</div>
+        <div class="deadline">⏳ ${q.deadline || '无'}</div>
+      </div>`;
+    });
+  } else {
+    html += '<div class="empty">队列清空 🎉</div>';
+  }
+  html += '</div>';
+
+  // Cron table
+  html += '<div class="card full-width"><h2>⏰ Cron 任务</h2>';
+  if (d.crons && d.crons.length > 0) {
+    html += '<table class="cron-table"><tr><th>任务</th><th>状态</th><th>频率</th><th>失败</th></tr>';
+    d.crons.forEach(c => {
+      html += `<tr><td>${c.name}</td><td>${statusIcon(c.status)}</td><td>${c.freq}</td><td>${c.fails}</td></tr>`;
+    });
+    html += '</table>';
+  } else {
+    html += '<div class="empty">无 cron 任务</div>';
+  }
+  html += '</div>';
+
+  // System
+  if (d.system) {
+    const s = d.system;
+    html += `<div class="card"><h2>🏥 系统状态</h2>
+      <div class="stat-row"><span>活跃会话</span><span class="stat-val">${s.sessions}</span></div>
+      <div class="stat-row"><span>Agent</span><span class="stat-val">${s.agents}</span></div>
+      <div class="stat-row"><span>通道</span><span class="stat-val">${s.channels}</span></div>
+      <div class="stat-row"><span>Cron 连续失败</span><span class="stat-val" style="color:${s.cronFails > 0 ? '#f87171' : '#34d399'}">${s.cronFails}</span></div>
+      <div class="stat-row"><span>最近备份</span><span class="stat-val">${s.lastBackup}</span></div>
+    </div>`;
+  }
+
+  // Upgrade
+  if (d.upgrade) {
+    const u = d.upgrade;
+    html += `<div class="card"><h2>🚀 统一升级进度</h2>
+      <div class="stat-row"><span>Phase 0 基础保障</span>${phaseLabel(u.phase0)}</div>
+      <div class="stat-row"><span>Phase 1 可靠性</span>${phaseLabel(u.phase1)}</div>
+      <div class="stat-row"><span>Phase 2 质量</span>${phaseLabel(u.phase2)}</div>
+      <div class="stat-row"><span>Phase 3 自进化</span>${phaseLabel(u.phase3)}</div>
+      ${u.deferred ? `<div class="stat-row"><span>暂缓</span><span style="color:#4b5563">${u.deferred}</span></div>` : ''}
+    </div>`;
+  }
+
+  document.getElementById('grid').innerHTML = html;
+
+  // Timestamp
+  if (d.updated) {
+    const t = new Date(d.updated);
+    document.getElementById('ts').textContent = `数据更新：${t.toLocaleString('zh-CN', {timeZone:'Asia/Shanghai'})} CST`;
+  }
+}
+
+function loadData() {
+  fetch(DATA_URL + '?t=' + Date.now())
+    .then(r => r.json())
+    .then(render)
+    .catch(e => {
+      document.getElementById('alerts').innerHTML = `<div class="alert"><strong>⚠️</strong> 加载数据失败：${e.message}</div>`;
+    });
+}
+
+loadData();
+</script>
+</body>
+</html>

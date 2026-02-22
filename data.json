@@ -1,0 +1,39 @@
+{
+  "updated": "2026-02-22T22:18:00+08:00",
+  "alerts": [],
+  "contexts": [
+    {"name": "Monday #monday", "pct": 12.0},
+    {"name": "Coder #coder (新)", "pct": 6.2}
+  ],
+  "queue": [
+    {"owner": "coder", "desc": "灰度对齐 Phase 1（统一升级计划）", "deadline": "2/23 18:00"}
+  ],
+  "crons": [
+    {"name": "自驱动巡检", "status": "ok", "freq": "30min", "fails": 0},
+    {"name": "承诺追踪巡检", "status": "ok", "freq": "30min", "fails": 0},
+    {"name": "健康检测", "status": "ok", "freq": "1h", "fails": 0},
+    {"name": "Coder 自驱巡检", "status": "ok", "freq": "2h", "fails": 0},
+    {"name": "GitHub Issue 巡查", "status": "ok", "freq": "6h", "fails": 0},
+    {"name": "灰度采样报告", "status": "ok", "freq": "6h", "fails": 0},
+    {"name": "Phoenix 备份", "status": "ok", "freq": "12h", "fails": 0},
+    {"name": "Cron 审计报告", "status": "ok", "freq": "12h", "fails": 0},
+    {"name": "晨报", "status": "ok", "freq": "每天 08:00", "fails": 0},
+    {"name": "博主简报", "status": "ok", "freq": "每天 08:30", "fails": 0},
+    {"name": "Memory 周整理", "status": "ok", "freq": "每周日 22:00", "fails": 0},
+    {"name": "灰度结论提醒", "status": "pending", "freq": "一次性 2/25", "fails": 0}
+  ],
+  "system": {
+    "sessions": 25,
+    "agents": "3 (Mon+Cod+Echo)",
+    "channels": "Discord + Telegram",
+    "cronFails": 0,
+    "lastBackup": "5h 前 ✅"
+  },
+  "upgrade": {
+    "phase0": "done",
+    "phase1": "in_progress",
+    "phase2": "queued",
+    "phase3": "queued",
+    "deferred": "插件冲突治理"
+  }
+}
