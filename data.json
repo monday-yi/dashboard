@@ -1,5 +1,5 @@
 {
-  "updated": "2026-02-23T03:02:26+08:00",
+  "updated": "2026-02-23T03:30:52+08:00",
   "alerts": [
     "[sessions-send] health=degraded, success_rate=0.00%, queue_pending=0"
   ],
@@ -9,19 +9,19 @@
       "pct": 53.2
     },
     {
-      "name": "Monday #monday-2",
+      "name": "Monday #monday(2)",
       "pct": 39.1
     },
     {
-      "name": "Monday 会议室",
+      "name": "会议室",
       "pct": 33.5
     },
     {
       "name": "Monday webchat",
-      "pct": 23.3
+      "pct": 23.5
     },
     {
-      "name": "Coder 灰度采样报告",
+      "name": "灰度采样报告",
       "pct": 19.2
     },
     {
@@ -29,47 +29,47 @@
       "pct": 17.1
     },
     {
-      "name": "Echo 博主简报",
+      "name": "博主简报",
       "pct": 14.6
     },
     {
-      "name": "Echo Memory周整理",
+      "name": "Memory 周整理",
       "pct": 10.4
     },
     {
-      "name": "Monday 日报",
+      "name": "日报",
       "pct": 10.1
     },
     {
-      "name": "Coder 创作间",
+      "name": "Coder 任务频道",
       "pct": 9.7
     },
     {
-      "name": "Echo Cron审计报告",
+      "name": "Cron 审计报告",
       "pct": 9.5
     },
     {
-      "name": "Echo 晨报",
+      "name": "晨报",
       "pct": 8.7
     },
     {
-      "name": "Coder Coder自驱巡检",
+      "name": "Coder 自驱巡检",
       "pct": 6.9
     },
     {
-      "name": "Echo GitHubIssue巡查",
+      "name": "GitHub Issue 巡查",
       "pct": 6.6
     },
     {
-      "name": "Coder #monday(coder)",
+      "name": "Coder #monday",
       "pct": 6.3
     },
     {
-      "name": "Coder 会议室(coder)",
+      "name": "Coder 会议室",
       "pct": 6.2
     },
     {
-      "name": "Echo Phoenix备份",
+      "name": "Phoenix 备份",
       "pct": 6.1
     },
     {
@@ -77,20 +77,20 @@
       "pct": 5.9
     },
     {
-      "name": "Echo 会议室(echo)",
+      "name": "Echo 会议室",
       "pct": 5.8
     },
     {
-      "name": "Echo 承诺追踪巡检",
+      "name": "承诺追踪巡检",
       "pct": 5.8
     },
     {
-      "name": "Echo #monday(echo)",
+      "name": "Echo #monday",
       "pct": 5.8
     },
     {
-      "name": "Echo 健康检测",
-      "pct": 5.7
+      "name": "健康检测",
+      "pct": 5.6
     }
   ],
   "queue": [
