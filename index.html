@@ -29,6 +29,7 @@ h1 .refresh:hover{color:#e5e7eb;border-color:#60a5fa}
 .cron-table th{text-align:left;color:#6b7280;padding:3px 4px;border-bottom:1px solid #374151}
 .cron-table td{padding:3px 4px;border-bottom:1px solid #1f2937}
 .status-ok{color:#34d399}.status-warn{color:#fbbf24}.status-err{color:#f87171}
+.cron-note{color:#6b7280;font-style:italic;max-width:220px}
 .queue-item{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid #374151;font-size:12px}
 .queue-item:last-child{border:none}
 .owner{color:white;padding:1px 5px;border-radius:3px;font-size:10px}
@@ -112,15 +113,15 @@ function render(d) {
   }
   html += '</div>';
 
-  // Cron - split recurring vs one-time
-  const recurCrons = (d.crons || []).filter(c => c.status !== 'pending');
-  const onceCrons = (d.crons || []).filter(c => c.status === 'pending');
+  // Cron - split by type field (fallback to status for compat)
+  const recurCrons = (d.crons || []).filter(c => (c.type || '') === 'recurring' || (!c.type && c.status !== 'pending'));
+  const onceCrons = (d.crons || []).filter(c => (c.type || '') === 'once' || (!c.type && c.status === 'pending'));
 
   html += '<div class="card full-width"><h2>⏰ 循环任务</h2>';
   if (recurCrons.length > 0) {
-    html += '<table class="cron-table"><tr><th>任务</th><th>状态</th><th>频率</th><th>失败</th></tr>';
+    html += '<table class="cron-table"><tr><th>任务</th><th>状态</th><th>频率</th><th>说明</th></tr>';
     recurCrons.forEach(c => {
-      html += `<tr><td>${c.name}</td><td>${statusIcon(c.status)}</td><td>${c.freq}</td><td>${c.fails}</td></tr>`;
+      html += `<tr><td>${c.name}</td><td>${statusIcon(c.status)}</td><td>${c.freq}</td><td class="cron-note">${c.note || ''}</td></tr>`;
     });
     html += '</table>';
   } else {
@@ -130,9 +131,9 @@ function render(d) {
 
   html += '<div class="card full-width"><h2>📌 一次性任务</h2>';
   if (onceCrons.length > 0) {
-    html += '<table class="cron-table"><tr><th>任务</th><th>状态</th><th>触发时间</th><th>失败</th></tr>';
+    html += '<table class="cron-table"><tr><th>任务</th><th>状态</th><th>触发时间</th><th>说明</th></tr>';
     onceCrons.forEach(c => {
-      html += `<tr><td>${c.name}</td><td>${statusIcon(c.status)}</td><td>${c.freq}</td><td>${c.fails}</td></tr>`;
+      html += `<tr><td>${c.name}</td><td>${statusIcon(c.status)}</td><td>${c.freq}</td><td class="cron-note">${c.note || ''}</td></tr>`;
     });
     html += '</table>';
   } else {
