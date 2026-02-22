@@ -1,86 +1,76 @@
 {
-  "updated": "2026-02-23T00:00:39+08:00",
-  "alerts": [],
+  "updated": "2026-02-23T00:31:26+08:00",
+  "alerts": [
+    "[sessions-send] health=degraded, success_rate=0.00%, queue_pending=0"
+  ],
   "contexts": [
     {
-      "key": "agent:coder:cron:66bd9b2d",
-      "name": "灰度采样报告",
+      "name": "Coder",
       "pct": 64.8
     },
     {
-      "key": "agent:coder:cron:015bc99b",
-      "name": "Coder 自驱巡检",
-      "pct": 48.4
+      "name": "Coder",
+      "pct": 45.6
     },
     {
-      "key": "agent:main:discord:channel:1474808340222836746",
-      "name": "Monday #monday",
-      "pct": 37
+      "name": "Monday",
+      "pct": 39.1
     },
     {
-      "key": "agent:main:main",
-      "name": "webchat",
-      "pct": 22.3
+      "name": "Monday",
+      "pct": 33.5
     },
     {
-      "key": "agent:coder:discord:channel:1472864942997635294",
-      "name": "Coder 会议室",
-      "pct": 18.7
+      "name": "Monday",
+      "pct": 22.8
     },
     {
-      "key": "agent:coder:discord:channel:1474808342613332153",
-      "name": "Coder #coder",
+      "name": "Coder",
       "pct": 16.3
     },
     {
-      "key": "agent:echo:cron:dc08c31e",
-      "name": "博主简报",
+      "name": "Echo",
       "pct": 14.6
     },
     {
-      "key": "agent:main:discord:channel:1472864942997635294",
-      "name": "Monday 会议室",
-      "pct": 13.9
-    },
-    {
-      "key": "agent:echo:cron:f1af0759",
-      "name": "Memory 周整理",
+      "name": "Echo",
       "pct": 10.4
     },
     {
-      "key": "agent:main:discord:channel:1472865064972193843",
-      "name": "日报",
+      "name": "Monday",
       "pct": 10.1
     },
     {
-      "key": "agent:echo:cron:3ae00f06",
-      "name": "晨报",
-      "pct": 8.7
+      "name": "Echo",
+      "pct": 9.5
     },
     {
-      "key": "agent:echo:cron:0ae38ece",
-      "name": "GitHub Issue 巡查",
-      "pct": 6.6
-    },
-    {
-      "key": "agent:echo:cron:64621a29",
-      "name": "Phoenix 备份",
+      "name": "Echo",
       "pct": 6.1
     },
     {
-      "key": "agent:echo:discord:channel:1474808345402806425",
-      "name": "Echo #echo",
+      "name": "Echo",
+      "pct": 6.6
+    },
+    {
+      "name": "Coder",
+      "pct": 6.2
+    },
+    {
+      "name": "Echo",
       "pct": 5.9
     },
     {
-      "key": "agent:echo:cron:f69cac36",
-      "name": "承诺追踪巡检",
+      "name": "Echo",
       "pct": 5.8
     },
     {
-      "key": "agent:echo:cron:7fb11dc6",
-      "name": "健康检测",
-      "pct": 5.6
+      "name": "Echo",
+      "pct": 5.8
+    },
+    {
+      "name": "Echo",
+      "pct": 5.7
     }
   ],
   "queue": [
@@ -185,7 +175,20 @@
     "agents": "3 (Mon+Cod+Echo)",
     "channels": "Discord + Telegram",
     "cronFails": 0,
-    "lastBackup": "5h 前 ✅"
+    "lastBackup": "5h 前 ✅",
+    "sessionsSend": {
+      "health": "degraded",
+      "windowHours": 24,
+      "total": 0,
+      "ok": 0,
+      "drop": 0,
+      "invalid": 0,
+      "successRate": 0,
+      "dropRate": 0,
+      "queuePending": 0,
+      "lastAlert": "2026-02-22T16:22:01Z ALERT REPORT total=0 ok=0 drop=0 invalid=0 success_rate=0.00% drop_rate=0.00% queue_pending=0 window_hours=24 reasons=success_rate=0.00%<98.00%;",
+      "lastReplay": "REPLAY_OK processed=0 ok=0 retry=0 dropped=0 skipped=0"
+    }
   },
   "upgrade": {
     "phase0": "done",
