@@ -1,45 +1,86 @@
 {
-  "updated": "2026-02-22T23:41:30+08:00",
-  "alerts": [
-    "⚡ 上下文告警：Coder 会议室 已达 89.1%，需要立即 /new！",
-    "⚡ 上下文告警：Monday 会议室 已达 77.3%，建议尽快收束"
-  ],
+  "updated": "2026-02-23T00:00:39+08:00",
+  "alerts": [],
   "contexts": [
     {
-      "name": "Coder 会议室",
-      "pct": 89.1
-    },
-    {
-      "name": "Monday 会议室",
-      "pct": 77.3
-    },
-    {
-      "name": "Coder 灰度采样 cron",
+      "key": "agent:coder:cron:66bd9b2d",
+      "name": "灰度采样报告",
       "pct": 64.8
     },
     {
-      "name": "Coder 自驱巡检 cron",
+      "key": "agent:coder:cron:015bc99b",
+      "name": "Coder 自驱巡检",
       "pct": 48.4
     },
     {
+      "key": "agent:main:discord:channel:1474808340222836746",
+      "name": "Monday #monday",
+      "pct": 37
+    },
+    {
+      "key": "agent:main:main",
+      "name": "webchat",
+      "pct": 22.3
+    },
+    {
+      "key": "agent:coder:discord:channel:1472864942997635294",
+      "name": "Coder 会议室",
+      "pct": 18.7
+    },
+    {
+      "key": "agent:coder:discord:channel:1474808342613332153",
       "name": "Coder #coder",
       "pct": 16.3
     },
     {
-      "name": "Monday #monday",
-      "pct": 12.8
+      "key": "agent:echo:cron:dc08c31e",
+      "name": "博主简报",
+      "pct": 14.6
     },
     {
-      "name": "Monday webchat",
-      "pct": 22.3
+      "key": "agent:main:discord:channel:1472864942997635294",
+      "name": "Monday 会议室",
+      "pct": 13.9
     },
     {
+      "key": "agent:echo:cron:f1af0759",
+      "name": "Memory 周整理",
+      "pct": 10.4
+    },
+    {
+      "key": "agent:main:discord:channel:1472865064972193843",
+      "name": "日报",
+      "pct": 10.1
+    },
+    {
+      "key": "agent:echo:cron:3ae00f06",
+      "name": "晨报",
+      "pct": 8.7
+    },
+    {
+      "key": "agent:echo:cron:0ae38ece",
+      "name": "GitHub Issue 巡查",
+      "pct": 6.6
+    },
+    {
+      "key": "agent:echo:cron:64621a29",
+      "name": "Phoenix 备份",
+      "pct": 6.1
+    },
+    {
+      "key": "agent:echo:discord:channel:1474808345402806425",
       "name": "Echo #echo",
       "pct": 5.9
     },
     {
-      "name": "Monday 自驱巡检 cron",
-      "pct": 10
+      "key": "agent:echo:cron:f69cac36",
+      "name": "承诺追踪巡检",
+      "pct": 5.8
+    },
+    {
+      "key": "agent:echo:cron:7fb11dc6",
+      "name": "健康检测",
+      "pct": 5.6
     }
   ],
   "queue": [
