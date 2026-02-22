@@ -1,19 +1,15 @@
 {
-  "updated": "2026-02-23T02:01:02+08:00",
+  "updated": "2026-02-23T02:31:04+08:00",
   "alerts": [
     "[sessions-send] health=degraded, success_rate=0.00%, queue_pending=0"
   ],
   "contexts": [
     {
-      "name": "灰度采样报告",
-      "pct": 64.8
-    },
-    {
       "name": "Monday #monday",
       "pct": 53.2
     },
     {
-      "name": "Monday #monday channel",
+      "name": "Monday #monday(2)",
       "pct": 39.1
     },
     {
@@ -22,54 +18,50 @@
     },
     {
       "name": "Monday webchat",
-      "pct": 23.3
+      "pct": 23.2
+    },
+    {
+      "name": "Coder 灰度采样",
+      "pct": 19.2
     },
     {
       "name": "Coder #coder",
-      "pct": 16.3
+      "pct": 16.8
     },
     {
-      "name": "博主简报",
+      "name": "Echo 博主简报",
       "pct": 14.6
     },
     {
-      "name": "Memory周整理",
+      "name": "Echo Memory周整理",
       "pct": 10.4
     },
     {
-      "name": "Cron审计报告",
+      "name": "Echo Cron审计",
       "pct": 9.5
     },
     {
-      "name": "晨报",
+      "name": "Echo 晨报",
       "pct": 8.7
     },
     {
-      "name": "Coder自驱巡检",
-      "pct": 7.4
-    },
-    {
-      "name": "GitHub Issue巡查",
+      "name": "Echo GitHub Issue",
       "pct": 6.6
     },
     {
-      "name": "Coder #monday",
-      "pct": 6.3
-    },
-    {
-      "name": "Coder 会议室",
-      "pct": 6.2
-    },
-    {
-      "name": "Phoenix备份",
+      "name": "Echo Phoenix备份",
       "pct": 6.1
     },
     {
-      "name": "承诺追踪巡检",
+      "name": "Echo #echo",
+      "pct": 5.9
+    },
+    {
+      "name": "Echo 承诺追踪",
       "pct": 5.8
     },
     {
-      "name": "健康检测",
+      "name": "Echo 健康检测",
       "pct": 5.7
     }
   ],
