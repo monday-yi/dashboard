@@ -1,95 +1,68 @@
 {
-  "updated": "2026-02-23T05:01:18+08:00",
+  "updated": "2026-02-23T05:30:33+08:00",
   "alerts": [
+    "⚡ 上下文告警：Monday #monday 53.2% - 需要立即 /new！",
     "[sessions-send] health=degraded, success_rate=0.00%, queue_pending=0"
   ],
   "contexts": [
     {
-      "name": "Monday",
+      "name": "Monday #monday",
       "pct": 53.2
     },
     {
-      "name": "Monday",
-      "pct": 40.5
+      "name": "Monday 主会话",
+      "pct": 40.7
     },
     {
-      "name": "Monday",
+      "name": "Monday #monday-2",
       "pct": 39.1
     },
     {
-      "name": "Monday",
+      "name": "Monday 会议室",
       "pct": 33.5
     },
     {
-      "name": "Coder",
-      "pct": 19.2
-    },
-    {
-      "name": "Coder",
+      "name": "Coder #coder",
       "pct": 17.2
     },
     {
-      "name": "Echo",
+      "name": "Echo 博主简报",
       "pct": 14.6
     },
     {
-      "name": "Echo",
+      "name": "Coder 灰度报告",
+      "pct": 19.2
+    },
+    {
+      "name": "Echo Memory周整理",
       "pct": 10.4
     },
     {
-      "name": "Monday",
+      "name": "Monday 日报",
       "pct": 10.1
     },
     {
-      "name": "Coder",
+      "name": "Coder 任务频道",
       "pct": 9.7
     },
     {
-      "name": "Echo",
+      "name": "Echo Cron审计",
       "pct": 9.5
     },
     {
-      "name": "Echo",
+      "name": "Echo 晨报",
       "pct": 8.7
     },
     {
-      "name": "Coder",
+      "name": "Coder 自驱巡检",
       "pct": 6.8
     },
     {
-      "name": "Echo",
+      "name": "Echo GitHub巡查",
       "pct": 6.6
     },
     {
-      "name": "Coder",
-      "pct": 6.3
-    },
-    {
-      "name": "Coder",
-      "pct": 6.2
-    },
-    {
-      "name": "Echo",
-      "pct": 6.1
-    },
-    {
-      "name": "Echo",
-      "pct": 5.9
-    },
-    {
-      "name": "Echo",
-      "pct": 5.8
-    },
-    {
-      "name": "Echo",
-      "pct": 5.8
-    },
-    {
-      "name": "Echo",
-      "pct": 5.8
-    },
-    {
-      "name": "Echo",
+      "name": "Echo 健康检测",
       "pct": 5.7
     }
   ],
