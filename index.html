@@ -182,17 +182,7 @@ function render(d) {
     }
   }
 
-  // Upgrade
-  if (d.upgrade) {
-    const u = d.upgrade;
-    html += `<div class="card"><h2>🚀 统一升级进度</h2>
-      <div class="stat-row"><span>Phase 0 基础保障</span>${phaseLabel(u.phase0)}</div>
-      <div class="stat-row"><span>Phase 1 可靠性</span>${phaseLabel(u.phase1)}</div>
-      <div class="stat-row"><span>Phase 2 质量</span>${phaseLabel(u.phase2)}</div>
-      <div class="stat-row"><span>Phase 3 自进化</span>${phaseLabel(u.phase3)}</div>
-      ${u.deferred ? `<div class="stat-row"><span>暂缓</span><span style="color:#4b5563">${u.deferred}</span></div>` : ''}
-    </div>`;
-  }
+  // Upgrade section removed - completed 2026-02-23
 
   document.getElementById('grid').innerHTML = html;
 
