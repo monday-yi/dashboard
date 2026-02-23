@@ -1,5 +1,5 @@
 {
-  "updated": "2026-02-24T00:47:26+08:00",
+  "updated": "2026-02-24T01:47:42+08:00",
   "alerts": [],
   "contexts": [
     {
@@ -125,11 +125,11 @@
     }
   ],
   "system": {
-    "sessions": 35,
+    "sessions": 32,
     "agents": "3 (Coder+Echo+Monday)",
     "channels": "Discord",
     "cronFails": 0,
-    "lastBackup": "2h 前 ✅",
+    "lastBackup": "3h 前 ✅",
     "sessionsSend": {
       "health": "idle",
       "windowHours": 24,
