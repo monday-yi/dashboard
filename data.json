@@ -1,10 +1,16 @@
 {
-  "updated": "2026-02-23T13:00:25+08:00",
-  "alerts": [],
+  "updated": "2026-02-23T13:30:31+08:00",
+  "alerts": [
+    "⚡ 上下文告警：Monday 会议室 已达 76.9%，建议尽快收束"
+  ],
   "contexts": [
     {
       "name": "Monday 会议室",
-      "pct": 64.4
+      "pct": 76.9
+    },
+    {
+      "name": "Monday #monday",
+      "pct": 23.4
     },
     {
       "name": "Monday #提醒",
@@ -16,10 +22,6 @@
     },
     {
       "name": "Monday #日报",
-      "pct": 9.6
-    },
-    {
-      "name": "Monday #monday",
       "pct": 9.6
     }
   ],
@@ -81,9 +83,9 @@
     },
     {
       "name": "coder-memory-distill-6h",
-      "status": "ok",
+      "status": "err",
       "freq": "6h",
-      "fails": 0,
+      "fails": 1,
       "note": "",
       "type": "recurring"
     },
@@ -140,7 +142,7 @@
     "sessions": 35,
     "agents": "3 (Coder+Echo+Monday)",
     "channels": "Discord",
-    "cronFails": 0,
+    "cronFails": 1,
     "lastBackup": "2h 前 ✅",
     "sessionsSend": {
       "health": "idle",
