@@ -1,87 +1,99 @@
 {
-  "updated": "2026-02-23T09:30:46+08:00",
+  "updated": "2026-02-23T10:01:21+08:00",
   "alerts": [
     "[sessions-send] health=degraded, success_rate=0.00%, queue_pending=0"
   ],
   "contexts": [
     {
-      "name": "Monday 会议室",
-      "pct": 67.4
-    },
-    {
-      "name": "Monday #monday",
+      "name": "Monday",
       "pct": 53.2
     },
     {
-      "name": "Monday 官网",
-      "pct": 43.1
+      "name": "Monday",
+      "pct": 43.4
     },
     {
-      "name": "Monday #monday(2)",
-      "pct": 39.1
-    },
-    {
-      "name": "Coder #coder",
-      "pct": 18.1
-    },
-    {
-      "name": "Coder 自驱巡检",
+      "name": "Coder",
       "pct": 16.3
     },
     {
-      "name": "博主简报",
+      "name": "Echo",
       "pct": 14.9
     },
     {
-      "name": "灰度采样报告",
+      "name": "Monday",
+      "pct": 12.9
+    },
+    {
+      "name": "Coder",
       "pct": 11.4
     },
     {
-      "name": "Memory 周整理",
+      "name": "Echo",
       "pct": 10.4
     },
     {
-      "name": "Monday #日报",
-      "pct": 10.1
+      "name": "Monday",
+      "pct": 9.7
     },
     {
       "name": "Coder",
       "pct": 9.7
     },
     {
-      "name": "Cron 审计报告",
+      "name": "Monday",
+      "pct": 9.6
+    },
+    {
+      "name": "Echo",
       "pct": 9.5
     },
     {
-      "name": "晨报",
+      "name": "Echo",
       "pct": 8.6
     },
     {
-      "name": "Coder 会议室",
-      "pct": 7.5
+      "name": "Coder",
+      "pct": 7.4
     },
     {
-      "name": "GitHub Issue 巡查",
+      "name": "Echo",
       "pct": 6.6
     },
     {
-      "name": "Echo #echo",
+      "name": "Coder",
+      "pct": 6.4
+    },
+    {
+      "name": "Coder",
       "pct": 6.3
     },
     {
-      "name": "Phoenix 备份",
+      "name": "Coder",
+      "pct": 6.3
+    },
+    {
+      "name": "Echo",
       "pct": 6.1
     },
     {
-      "name": "Echo 会议室",
+      "name": "Echo",
+      "pct": 5.9
+    },
+    {
+      "name": "Echo",
       "pct": 5.8
     },
     {
-      "name": "承诺追踪巡检",
+      "name": "Echo",
       "pct": 5.8
     },
     {
-      "name": "健康检测",
+      "name": "Echo",
+      "pct": 5.8
+    },
+    {
+      "name": "Echo",
       "pct": 5.7
     }
   ],
@@ -203,7 +215,7 @@
       "successRate": 0,
       "dropRate": 0,
       "queuePending": 0,
-      "lastAlert": "2026-02-23T01:22:01Z ALERT REPORT total=0 ok=0 drop=0 invalid=0 success_rate=0.00% drop_rate=0.00% queue_pending=0 window_hours=24 reasons=success_rate=0.00%<98.00%;",
+      "lastAlert": "2026-02-23T01:52:01Z ALERT REPORT total=0 ok=0 drop=0 invalid=0 success_rate=0.00% drop_rate=0.00% queue_pending=0 window_hours=24 reasons=success_rate=0.00%<98.00%;",
       "lastReplay": ""
     }
   },
