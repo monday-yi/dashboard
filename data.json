@@ -1,5 +1,5 @@
 {
-  "updated": "2026-02-24T06:47:28+08:00",
+  "updated": "2026-02-24T07:47:26+08:00",
   "alerts": [],
   "contexts": [
     {
@@ -16,7 +16,7 @@
     },
     {
       "name": "Monday 会议室",
-      "pct": 27.4
+      "pct": 32.0
     },
     {
       "name": "Monday #echo",
@@ -125,11 +125,11 @@
     }
   ],
   "system": {
-    "sessions": 20,
+    "sessions": 18,
     "agents": "3 (Coder+Echo+Monday)",
     "channels": "Discord",
     "cronFails": 0,
-    "lastBackup": "8h 前 ✅",
+    "lastBackup": "9h 前 ✅",
     "sessionsSend": {
       "health": "idle",
       "windowHours": 24,
