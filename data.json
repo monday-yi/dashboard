@@ -1,136 +1,126 @@
 {
-  "updated": "2026-02-23T10:33:14+08:00",
-  "alerts": [
-    "[sessions-send] health=degraded, success_rate=0.00%, queue_pending=0"
-  ],
+  "updated": "2026-02-23T11:02:02+08:00",
+  "alerts": [],
   "contexts": [
     {
-      "name": "Monday",
+      "name": "Monday #想法",
       "pct": 53.2
     },
     {
-      "name": "Monday",
-      "pct": 43.5
+      "name": "Monday webchat",
+      "pct": 44.3
     },
     {
-      "name": "Coder",
-      "pct": 16.3
+      "name": "Monday 会议室",
+      "pct": 31.7
     },
     {
-      "name": "Echo",
-      "pct": 14.9
+      "name": "Monday cron",
+      "pct": 22.1
     },
     {
-      "name": "Monday",
+      "name": "Monday cron",
+      "pct": 19.8
+    },
+    {
+      "name": "Monday cron",
+      "pct": 15.2
+    },
+    {
+      "name": "Monday cron",
+      "pct": 14.5
+    },
+    {
+      "name": "Monday cron",
+      "pct": 14.2
+    },
+    {
+      "name": "Monday cron",
+      "pct": 13.7
+    },
+    {
+      "name": "Monday cron",
+      "pct": 13.4
+    },
+    {
+      "name": "Monday cron",
+      "pct": 13.4
+    },
+    {
+      "name": "Monday cron",
+      "pct": 13.2
+    },
+    {
+      "name": "Monday cron",
+      "pct": 13.1
+    },
+    {
+      "name": "Monday cron",
       "pct": 12.9
     },
     {
-      "name": "Coder",
-      "pct": 11.4
+      "name": "Monday cron",
+      "pct": 12.9
     },
     {
-      "name": "Echo",
-      "pct": 10.4
+      "name": "Monday cron",
+      "pct": 12.8
     },
     {
-      "name": "Echo",
-      "pct": 10.3
+      "name": "Monday cron",
+      "pct": 12.7
     },
     {
-      "name": "Monday",
-      "pct": 10
+      "name": "Monday cron",
+      "pct": 12.7
     },
     {
-      "name": "Monday",
+      "name": "Monday cron",
+      "pct": 12.6
+    },
+    {
+      "name": "Monday cron",
+      "pct": 12.4
+    },
+    {
+      "name": "Monday cron",
+      "pct": 12.2
+    },
+    {
+      "name": "Monday cron",
+      "pct": 12.1
+    },
+    {
+      "name": "Monday cron",
+      "pct": 12.0
+    },
+    {
+      "name": "Monday cron",
+      "pct": 10.6
+    },
+    {
+      "name": "Monday #提醒",
+      "pct": 10.0
+    },
+    {
+      "name": "Monday cron",
+      "pct": 10.0
+    },
+    {
+      "name": "Monday #进行中",
       "pct": 9.8
     },
     {
-      "name": "Monday",
+      "name": "Monday other",
       "pct": 9.7
     },
     {
-      "name": "Coder",
-      "pct": 9.7
-    },
-    {
-      "name": "Monday",
+      "name": "Monday #日报",
       "pct": 9.6
     },
     {
-      "name": "Monday",
+      "name": "Monday #monday",
       "pct": 9.6
-    },
-    {
-      "name": "Echo",
-      "pct": 8.6
-    },
-    {
-      "name": "Coder",
-      "pct": 7.4
-    },
-    {
-      "name": "Echo",
-      "pct": 6.6
-    },
-    {
-      "name": "Coder",
-      "pct": 6.4
-    },
-    {
-      "name": "Coder",
-      "pct": 6.4
-    },
-    {
-      "name": "Coder",
-      "pct": 6.3
-    },
-    {
-      "name": "Coder",
-      "pct": 6.3
-    },
-    {
-      "name": "Coder",
-      "pct": 6.3
-    },
-    {
-      "name": "Coder",
-      "pct": 6.2
-    },
-    {
-      "name": "Echo",
-      "pct": 6.1
-    },
-    {
-      "name": "Echo",
-      "pct": 5.9
-    },
-    {
-      "name": "Echo",
-      "pct": 5.8
-    },
-    {
-      "name": "Echo",
-      "pct": 5.8
-    },
-    {
-      "name": "Echo",
-      "pct": 5.8
-    },
-    {
-      "name": "Echo",
-      "pct": 5.8
-    },
-    {
-      "name": "Echo",
-      "pct": 5.8
-    },
-    {
-      "name": "Echo",
-      "pct": 5.8
-    },
-    {
-      "name": "Echo",
-      "pct": 5.7
     }
   ],
   "queue": [
@@ -138,28 +128,15 @@
       "owner": "monday",
       "desc": "博客第二篇「我不是工具，但我也不是人」初稿",
       "deadline": "2026-02-28T00:00:00Z"
-    },
-    {
-      "owner": "coder",
-      "desc": "打包 reliable-delivery + memory-lifecycle 两个 skill",
-      "deadline": "2026-02-24T08:42:35+08:00"
     }
   ],
   "crons": [
     {
-      "name": "自驱动巡检",
+      "name": "Agent 自驱动巡检（30min）",
       "status": "ok",
       "freq": "30min",
       "fails": 0,
-      "note": "全面巡检：承诺队列+上下文水位+催Coder+仪表盘数据更新",
-      "type": "recurring"
-    },
-    {
-      "name": "健康检测",
-      "status": "ok",
-      "freq": "1h",
-      "fails": 0,
-      "note": "系统健康检查，异常时才发#提醒",
+      "note": "",
       "type": "recurring"
     },
     {
@@ -167,31 +144,7 @@
       "status": "ok",
       "freq": "2h",
       "fails": 0,
-      "note": "Coder自己检查承诺单并继续干活",
-      "type": "recurring"
-    },
-    {
-      "name": "灰度采样报告",
-      "status": "ok",
-      "freq": "6h",
-      "fails": 0,
-      "note": "灰度并行数据采集，灰度结束后删除",
-      "type": "recurring"
-    },
-    {
-      "name": "GitHub Issue 巡查",
-      "status": "ok",
-      "freq": "每天 11:00",
-      "fails": 0,
-      "note": "跟进 openclaw-qa Issue 回复并自动回帖",
-      "type": "recurring"
-    },
-    {
-      "name": "Phoenix 备份",
-      "status": "ok",
-      "freq": "12h",
-      "fails": 0,
-      "note": "workspace+聊天记录备份到Git",
+      "note": "",
       "type": "recurring"
     },
     {
@@ -199,59 +152,107 @@
       "status": "ok",
       "freq": "12h",
       "fails": 0,
-      "note": "全景表格发#看板，仪表盘跑稳后可删",
+      "note": "",
       "type": "recurring"
     },
     {
-      "name": "晨报",
+      "name": "GitHub Issue 巡查",
       "status": "ok",
-      "freq": "每天 08:00",
+      "freq": "0 3 * * *",
       "fails": 0,
-      "note": "BTC/ETH行情+AI资讯+ClawHub新skill",
-      "type": "recurring"
-    },
-    {
-      "name": "博主简报",
-      "status": "ok",
-      "freq": "每天 08:30",
-      "fails": 0,
-      "note": "追踪博主动态，发#日报",
+      "note": "",
       "type": "recurring"
     },
     {
       "name": "Memory 周整理",
       "status": "ok",
-      "freq": "每周日 22:00",
+      "freq": "0 14 * * 0",
       "fails": 0,
-      "note": "记忆去重/矛盾/过期检查，只出建议不写入",
+      "note": "",
       "type": "recurring"
     },
     {
-      "name": "灰度结论提醒",
-      "status": "pending",
-      "freq": "2/25 14:19",
+      "name": "Phoenix 备份",
+      "status": "ok",
+      "freq": "12h",
       "fails": 0,
-      "note": "3天灰度评估节点，触发后自动删除",
+      "note": "",
+      "type": "recurring"
+    },
+    {
+      "name": "coder-memory-distill-6h",
+      "status": "ok",
+      "freq": "6h",
+      "fails": 0,
+      "note": "",
+      "type": "recurring"
+    },
+    {
+      "name": "coder-memory-monthly-rollup",
+      "status": "pending",
+      "freq": "20 0 1 * *",
+      "fails": 0,
+      "note": "",
+      "type": "recurring"
+    },
+    {
+      "name": "健康检测",
+      "status": "ok",
+      "freq": "1h",
+      "fails": 0,
+      "note": "",
+      "type": "recurring"
+    },
+    {
+      "name": "博主简报",
+      "status": "ok",
+      "freq": "30 0 * * *",
+      "fails": 0,
+      "note": "",
+      "type": "recurring"
+    },
+    {
+      "name": "晨报",
+      "status": "ok",
+      "freq": "0 0 * * *",
+      "fails": 0,
+      "note": "",
+      "type": "recurring"
+    },
+    {
+      "name": "灰度采样报告（每6小时）",
+      "status": "ok",
+      "freq": "6h",
+      "fails": 0,
+      "note": "",
+      "type": "recurring"
+    },
+    {
+      "name": "3天灰度结论提醒（对齐方案切换决策）",
+      "status": "pending",
+      "freq": "2026-02-25 06:19",
+      "fails": 0,
+      "note": "",
       "type": "once"
     }
   ],
   "system": {
-    "sessions": 25,
-    "agents": "3 (Mon+Cod+Echo)",
-    "channels": "Discord + Telegram",
+    "sessions": 35,
+    "agents": "3 (Coder+Echo+Monday)",
+    "channels": "Discord",
     "cronFails": 0,
-    "lastBackup": "5h 前 ✅",
+    "lastBackup": "0h 前 ✅",
     "sessionsSend": {
-      "health": "degraded",
+      "health": "idle",
       "windowHours": 24,
       "total": 0,
       "ok": 0,
       "drop": 0,
       "invalid": 0,
-      "successRate": 0,
-      "dropRate": 0,
+      "successRate": 0.0,
+      "dropRate": 0.0,
       "queuePending": 0,
-      "lastAlert": "2026-02-23T02:32:01Z SUPPRESS REPORT total=0 ok=0 drop=0 invalid=0 success_rate=0.00% drop_rate=0.00% queue_pending=0 window_hours=24 reasons=success_rate=0.00%<98.00%;",
+      "lastAlert": "",
       "lastReplay": ""
     }
   },
@@ -262,5 +263,21 @@
     "phase3": "done",
     "phase4": "done",
     "deferred": "插件冲突治理"
-  }
+  },
+  "tasks": [
+    {
+      "id": "1474615904791691274",
+      "name": "task-echo-android",
+      "owner": "Monday+Coder",
+      "status": "待启动",
+      "topic": "Echo 安卓迁移 | 负责人：Monday+Coder | 状态：待启动"
+    },
+    {
+      "id": "1474615901834973295",
+      "name": "task-vps-to-mac",
+      "owner": "Monday+Coder",
+      "status": "待启动",
+      "topic": "VPS → Mac Mini 迁移 | 负责人：Monday+Coder | 状态：待启动"
+    }
+  ]
 }
