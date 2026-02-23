@@ -1,16 +1,16 @@
 {
-  "updated": "2026-02-23T14:13:37+08:00",
+  "updated": "2026-02-23T14:47:27+08:00",
   "alerts": [
-    "⚡ 上下文告警：Monday 会议室 已达 76.9%，建议尽快收束"
+    "⚡ 上下文告警：Monday 会议室 已达 82.4%，建议尽快收束"
   ],
   "contexts": [
     {
       "name": "Monday 会议室",
-      "pct": 76.9
+      "pct": 82.4
     },
     {
       "name": "Monday #monday",
-      "pct": 56.0
+      "pct": 60.2
     },
     {
       "name": "Monday #提醒",
@@ -112,11 +112,11 @@
     }
   ],
   "system": {
-    "sessions": 36,
+    "sessions": 37,
     "agents": "3 (Coder+Echo+Monday)",
     "channels": "Discord",
     "cronFails": 1,
-    "lastBackup": "3h 前 ✅",
+    "lastBackup": "4h 前 ✅",
     "sessionsSend": {
       "health": "idle",
       "windowHours": 24,
