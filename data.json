@@ -1,5 +1,5 @@
 {
-  "updated": "2026-02-23T17:47:37+08:00",
+  "updated": "2026-02-23T18:47:28+08:00",
   "alerts": [],
   "contexts": [
     {
@@ -8,7 +8,7 @@
     },
     {
       "name": "Monday ch:1475408341042987110",
-      "pct": 30.8
+      "pct": 32.8
     },
     {
       "name": "Monday ch:1475371391200268424",
@@ -127,7 +127,7 @@
     "agents": "3 (Coder+Echo+Monday)",
     "channels": "Discord",
     "cronFails": 1,
-    "lastBackup": "7h 前 ✅",
+    "lastBackup": "8h 前 ✅",
     "sessionsSend": {
       "health": "idle",
       "windowHours": 24,
