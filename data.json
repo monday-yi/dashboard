@@ -1,59 +1,59 @@
 {
-  "updated": "2026-02-23T09:03:11+08:00",
+  "updated": "2026-02-23T09:30:46+08:00",
   "alerts": [
     "[sessions-send] health=degraded, success_rate=0.00%, queue_pending=0"
   ],
   "contexts": [
     {
-      "name": "Monday webchat",
-      "pct": 53.2
-    },
-    {
-      "name": "Monday webchat",
-      "pct": 43
+      "name": "Monday 会议室",
+      "pct": 67.4
     },
     {
       "name": "Monday #monday",
+      "pct": 53.2
+    },
+    {
+      "name": "Monday 官网",
+      "pct": 43.1
+    },
+    {
+      "name": "Monday #monday(2)",
       "pct": 39.1
     },
     {
-      "name": "Monday 会议室",
-      "pct": 30.6
-    },
-    {
       "name": "Coder #coder",
-      "pct": 17.3
+      "pct": 18.1
     },
     {
-      "name": "Coder Coder 自驱巡检",
+      "name": "Coder 自驱巡检",
       "pct": 16.3
     },
     {
-      "name": "Echo 博主简报",
+      "name": "博主简报",
       "pct": 14.9
     },
     {
-      "name": "Coder 灰度采样报告（每6小时）",
+      "name": "灰度采样报告",
       "pct": 11.4
     },
     {
-      "name": "Echo Memory 周整理",
+      "name": "Memory 周整理",
       "pct": 10.4
     },
     {
-      "name": "Monday webchat",
+      "name": "Monday #日报",
       "pct": 10.1
     },
     {
-      "name": "Coder webchat",
+      "name": "Coder",
       "pct": 9.7
     },
     {
-      "name": "Echo Cron 审计报告",
+      "name": "Cron 审计报告",
       "pct": 9.5
     },
     {
-      "name": "Echo 晨报",
+      "name": "晨报",
       "pct": 8.6
     },
     {
@@ -61,39 +61,27 @@
       "pct": 7.5
     },
     {
-      "name": "Coder coder-memory-distill-6h",
-      "pct": 7.4
-    },
-    {
-      "name": "Echo GitHub Issue 巡查",
+      "name": "GitHub Issue 巡查",
       "pct": 6.6
     },
     {
-      "name": "Coder #monday",
+      "name": "Echo #echo",
       "pct": 6.3
     },
     {
-      "name": "Echo Phoenix 备份",
+      "name": "Phoenix 备份",
       "pct": 6.1
-    },
-    {
-      "name": "Echo #echo",
-      "pct": 5.9
     },
     {
       "name": "Echo 会议室",
       "pct": 5.8
     },
     {
-      "name": "Echo 承诺追踪巡检",
+      "name": "承诺追踪巡检",
       "pct": 5.8
     },
     {
-      "name": "Echo #monday",
-      "pct": 5.8
-    },
-    {
-      "name": "Echo 健康检测",
+      "name": "健康检测",
       "pct": 5.7
     }
   ],
@@ -215,7 +203,7 @@
       "successRate": 0,
       "dropRate": 0,
       "queuePending": 0,
-      "lastAlert": "2026-02-23T01:02:01Z SUPPRESS REPORT total=0 ok=0 drop=0 invalid=0 success_rate=0.00% drop_rate=0.00% queue_pending=0 window_hours=24 reasons=success_rate=0.00%<98.00%;",
+      "lastAlert": "2026-02-23T01:22:01Z ALERT REPORT total=0 ok=0 drop=0 invalid=0 success_rate=0.00% drop_rate=0.00% queue_pending=0 window_hours=24 reasons=success_rate=0.00%<98.00%;",
       "lastReplay": ""
     }
   },
