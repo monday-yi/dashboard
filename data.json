@@ -1,5 +1,5 @@
 {
-  "updated": "2026-02-23T19:47:26+08:00",
+  "updated": "2026-02-23T20:47:30+08:00",
   "alerts": [],
   "contexts": [
     {
@@ -8,7 +8,7 @@
     },
     {
       "name": "Monday ch:1475408341042987110",
-      "pct": 40.1
+      "pct": 40.8
     },
     {
       "name": "Monday ch:1475371391200268424",
@@ -36,11 +36,6 @@
       "owner": "monday",
       "desc": "博客第二篇「我不是工具，但我也不是人」初稿",
       "deadline": "2026-02-28T00:00:00Z"
-    },
-    {
-      "owner": "coder",
-      "desc": "intent-queue.sh 立项时自动注册新频道到 openclaw.json 配置",
-      "deadline": "2026-02-24 20:00"
     }
   ],
   "crons": [
@@ -122,7 +117,7 @@
     "agents": "3 (Coder+Echo+Monday)",
     "channels": "Discord",
     "cronFails": 0,
-    "lastBackup": "9h 前 ✅",
+    "lastBackup": "10h 前 ✅",
     "sessionsSend": {
       "health": "idle",
       "windowHours": 24,
@@ -146,13 +141,6 @@
     "deferred": "插件冲突治理"
   },
   "tasks": [
-    {
-      "id": "1475408341042987110",
-      "name": "task-auto-register-channel",
-      "owner": "Coder",
-      "status": "in_progress",
-      "topic": "任务ID: 20260223-162448-6468 | 负责人: Coder | 状态: in_progress | 截止: 2026-02-24 20:00 | intent-queue立项自动注册频道"
-    },
     {
       "id": "1475371391200268424",
       "name": "task-coder-20260223-135544-3a20",
