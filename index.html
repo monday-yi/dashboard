@@ -113,6 +113,20 @@ function render(d) {
   }
   html += '</div>';
 
+  // In-progress tasks
+  html += '<div class="card"><h2>🧩 进行中任务</h2>';
+  if (d.tasks && d.tasks.length > 0) {
+    d.tasks.forEach(t => {
+      html += `<div class="queue-item">
+        <div><span class="owner ${ownerClass(t.owner || 'unknown')}">${t.owner || 'unknown'}</span> #${t.name || t.id}</div>
+        <div class="deadline">${t.status || 'unknown'}</div>
+      </div>`;
+    });
+  } else {
+    html += '<div class="empty">暂无进行中任务</div>';
+  }
+  html += '</div>';
+
   // Cron - split by type field (fallback to status for compat)
   const recurCrons = (d.crons || []).filter(c => (c.type || '') === 'recurring' || (!c.type && c.status !== 'pending'));
   const onceCrons = (d.crons || []).filter(c => (c.type || '') === 'once' || (!c.type && c.status === 'pending'));
@@ -151,6 +165,21 @@ function render(d) {
       <div class="stat-row"><span>Cron 连续失败</span><span class="stat-val" style="color:${s.cronFails > 0 ? '#f87171' : '#34d399'}">${s.cronFails}</span></div>
       <div class="stat-row"><span>最近备份</span><span class="stat-val">${s.lastBackup}</span></div>
     </div>`;
+
+    if (s.sessionsSend) {
+      const ss = s.sessionsSend;
+      const healthColor = ss.health === 'ok' ? '#34d399' : (ss.health === 'idle' ? '#9ca3af' : '#f87171');
+      html += `<div class="card"><h2>📨 Sessions Send 健康</h2>
+        <div class="stat-row"><span>健康状态</span><span class="stat-val" style="color:${healthColor}">${ss.health}</span></div>
+        <div class="stat-row"><span>统计窗口</span><span class="stat-val">${ss.windowHours}h</span></div>
+        <div class="stat-row"><span>成功率</span><span class="stat-val">${ss.successRate}%</span></div>
+        <div class="stat-row"><span>丢弃率</span><span class="stat-val">${ss.dropRate}%</span></div>
+        <div class="stat-row"><span>队列积压</span><span class="stat-val" style="color:${ss.queuePending > 0 ? '#f87171' : '#34d399'}">${ss.queuePending}</span></div>
+        <div class="stat-row"><span>总量/成功/丢弃</span><span class="stat-val">${ss.total}/${ss.ok}/${ss.drop}</span></div>
+        <div class="stat-row"><span>最近告警</span><span class="stat-val" style="font-size:10px;max-width:55%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${ss.lastAlert || '无'}</span></div>
+        <div class="stat-row"><span>最近重放</span><span class="stat-val" style="font-size:10px;max-width:55%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${ss.lastReplay || '无'}</span></div>
+      </div>`;
+    }
   }
 
   // Upgrade

@@ -1,118 +1,18 @@
 {
-  "updated": "2026-02-23T12:30:28+08:00",
+  "updated": "2026-02-23T12:53:01+08:00",
   "alerts": [],
   "contexts": [
     {
-      "name": "Monday #想法",
-      "pct": 53.2
-    },
-    {
-      "name": "Monday webchat",
-      "pct": 45.1
-    },
-    {
       "name": "Monday 会议室",
-      "pct": 31.7
-    },
-    {
-      "name": "Monday cron",
-      "pct": 22.1
-    },
-    {
-      "name": "Monday cron",
-      "pct": 19.8
-    },
-    {
-      "name": "Monday cron",
-      "pct": 15.2
-    },
-    {
-      "name": "Monday cron",
-      "pct": 14.5
-    },
-    {
-      "name": "Monday cron",
-      "pct": 14.2
-    },
-    {
-      "name": "Monday cron",
-      "pct": 13.7
-    },
-    {
-      "name": "Monday cron",
-      "pct": 13.4
-    },
-    {
-      "name": "Monday cron",
-      "pct": 13.4
-    },
-    {
-      "name": "Monday cron",
-      "pct": 13.2
-    },
-    {
-      "name": "Monday cron",
-      "pct": 13.1
-    },
-    {
-      "name": "Monday cron",
-      "pct": 12.9
-    },
-    {
-      "name": "Monday cron",
-      "pct": 12.9
-    },
-    {
-      "name": "Monday cron",
-      "pct": 12.8
-    },
-    {
-      "name": "Monday cron",
-      "pct": 12.7
-    },
-    {
-      "name": "Monday cron",
-      "pct": 12.7
-    },
-    {
-      "name": "Monday cron",
-      "pct": 12.6
-    },
-    {
-      "name": "Monday cron",
-      "pct": 12.4
-    },
-    {
-      "name": "Monday cron",
-      "pct": 12.2
-    },
-    {
-      "name": "Monday cron",
-      "pct": 12.1
-    },
-    {
-      "name": "Monday cron",
-      "pct": 12.0
-    },
-    {
-      "name": "Monday cron",
-      "pct": 10.6
+      "pct": 39.0
     },
     {
       "name": "Monday #提醒",
       "pct": 10.0
     },
     {
-      "name": "Monday cron",
-      "pct": 10.0
-    },
-    {
       "name": "Monday #进行中",
       "pct": 9.8
-    },
-    {
-      "name": "Monday other",
-      "pct": 9.7
     },
     {
       "name": "Monday #日报",
@@ -241,7 +141,7 @@
     "agents": "3 (Coder+Echo+Monday)",
     "channels": "Discord",
     "cronFails": 0,
-    "lastBackup": "1h 前 ✅",
+    "lastBackup": "2h 前 ✅",
     "sessionsSend": {
       "health": "idle",
       "windowHours": 24,
@@ -252,7 +152,7 @@
       "successRate": 0.0,
       "dropRate": 0.0,
       "queuePending": 0,
-      "lastAlert": "",
+      "lastAlert": "2026-02-23T04:52:02Z SUPPRESS REPORT total=0 ok=0 drop=0 invalid=0 success_rate=0.00% drop_rate=0.00% queue_pending=0 window_hours=24 reasons=success_rate=0.00%<98.00%;",
       "lastReplay": ""
     }
   },
