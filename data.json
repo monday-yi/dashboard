@@ -1,25 +1,25 @@
 {
-  "updated": "2026-02-23T21:47:27+08:00",
+  "updated": "2026-02-23T22:48:11+08:00",
   "alerts": [],
   "contexts": [
     {
       "name": "Monday ch:1475371391200268424",
-      "pct": 63.9
-    },
-    {
-      "name": "Monday 会议室",
-      "pct": 52.1
+      "pct": 68.4
     },
     {
       "name": "Monday ch:1475408341042987110",
       "pct": 40.8
     },
     {
-      "name": "Monday #monday",
-      "pct": 10.0
+      "name": "Monday 会议室",
+      "pct": 24.4
     },
     {
       "name": "Monday #提醒",
+      "pct": 10.0
+    },
+    {
+      "name": "Monday #monday",
       "pct": 10.0
     },
     {
@@ -121,11 +121,11 @@
     }
   ],
   "system": {
-    "sessions": 39,
+    "sessions": 40,
     "agents": "3 (Coder+Echo+Monday)",
     "channels": "Discord",
     "cronFails": 0,
-    "lastBackup": "11h 前 ✅",
+    "lastBackup": "0h 前 ✅",
     "sessionsSend": {
       "health": "idle",
       "windowHours": 24,
@@ -149,13 +149,6 @@
     "deferred": "插件冲突治理"
   },
   "tasks": [
-    {
-      "id": "1475371391200268424",
-      "name": "task-coder-20260223-135544-3a20",
-      "owner": "Coder",
-      "status": "in_progress",
-      "topic": "任务ID: 20260223-135544-3a20 | 负责人: Coder | 状态: in_progress | 截止: 2026-02-24 20:00 | 自主推进保障v1"
-    },
     {
       "id": "1474615904791691274",
       "name": "task-scout-sync",
