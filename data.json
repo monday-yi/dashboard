@@ -1,16 +1,10 @@
 {
-  "updated": "2026-02-23T14:47:27+08:00",
-  "alerts": [
-    "⚡ 上下文告警：Monday 会议室 已达 82.4%，建议尽快收束"
-  ],
+  "updated": "2026-02-23T15:47:28+08:00",
+  "alerts": [],
   "contexts": [
     {
-      "name": "Monday 会议室",
-      "pct": 82.4
-    },
-    {
       "name": "Monday #monday",
-      "pct": 60.2
+      "pct": 10.0
     },
     {
       "name": "Monday #提醒",
@@ -96,7 +90,7 @@
     },
     {
       "name": "综合巡检（1h）",
-      "status": "pending",
+      "status": "ok",
       "freq": "1h",
       "fails": 0,
       "note": "",
@@ -116,7 +110,7 @@
     "agents": "3 (Coder+Echo+Monday)",
     "channels": "Discord",
     "cronFails": 1,
-    "lastBackup": "4h 前 ✅",
+    "lastBackup": "5h 前 ✅",
     "sessionsSend": {
       "health": "idle",
       "windowHours": 24,
