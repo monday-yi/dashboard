@@ -1,18 +1,18 @@
 {
-  "updated": "2026-02-23T20:47:30+08:00",
+  "updated": "2026-02-23T21:47:27+08:00",
   "alerts": [],
   "contexts": [
     {
+      "name": "Monday ch:1475371391200268424",
+      "pct": 63.9
+    },
+    {
       "name": "Monday 会议室",
-      "pct": 43.1
+      "pct": 52.1
     },
     {
       "name": "Monday ch:1475408341042987110",
       "pct": 40.8
-    },
-    {
-      "name": "Monday ch:1475371391200268424",
-      "pct": 11.2
     },
     {
       "name": "Monday #monday",
@@ -88,6 +88,14 @@
       "type": "recurring"
     },
     {
+      "name": "task-autowake-loop-5m",
+      "status": "ok",
+      "freq": "5min",
+      "fails": 0,
+      "note": "",
+      "type": "recurring"
+    },
+    {
       "name": "每日简报",
       "status": "pending",
       "freq": "0 0 * * *",
@@ -117,7 +125,7 @@
     "agents": "3 (Coder+Echo+Monday)",
     "channels": "Discord",
     "cronFails": 0,
-    "lastBackup": "10h 前 ✅",
+    "lastBackup": "11h 前 ✅",
     "sessionsSend": {
       "health": "idle",
       "windowHours": 24,
