@@ -1,5 +1,5 @@
 {
-  "updated": "2026-02-23T18:47:28+08:00",
+  "updated": "2026-02-23T19:47:26+08:00",
   "alerts": [],
   "contexts": [
     {
@@ -8,7 +8,7 @@
     },
     {
       "name": "Monday ch:1475408341042987110",
-      "pct": 32.8
+      "pct": 40.1
     },
     {
       "name": "Monday ch:1475371391200268424",
@@ -41,11 +41,6 @@
       "owner": "coder",
       "desc": "intent-queue.sh 立项时自动注册新频道到 openclaw.json 配置",
       "deadline": "2026-02-24 20:00"
-    },
-    {
-      "owner": "monday",
-      "desc": "端到端立项流程测试",
-      "deadline": "2026-02-24T20:00:00+08:00"
     }
   ],
   "crons": [
@@ -83,9 +78,9 @@
     },
     {
       "name": "memory-distill-6h",
-      "status": "err",
+      "status": "ok",
       "freq": "6h",
-      "fails": 1,
+      "fails": 0,
       "note": "",
       "type": "recurring"
     },
@@ -126,8 +121,8 @@
     "sessions": 39,
     "agents": "3 (Coder+Echo+Monday)",
     "channels": "Discord",
-    "cronFails": 1,
-    "lastBackup": "8h 前 ✅",
+    "cronFails": 0,
+    "lastBackup": "9h 前 ✅",
     "sessionsSend": {
       "health": "idle",
       "windowHours": 24,
@@ -164,13 +159,6 @@
       "owner": "Coder",
       "status": "in_progress",
       "topic": "任务ID: 20260223-135544-3a20 | 负责人: Coder | 状态: in_progress | 截止: 2026-02-24 20:00 | 自主推进保障v1"
-    },
-    {
-      "id": "1475425636209266821",
-      "name": "task-monday-20260223-173436-2c69",
-      "owner": "monday",
-      "status": "pending",
-      "topic": "任务ID: 20260223-173436-2c69 | 负责人: monday | 状态: pending | 截止: 2026-02-24T20:00:00+08:00 | 端到端立项流程测试"
     },
     {
       "id": "1474615904791691274",
