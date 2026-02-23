@@ -1,5 +1,5 @@
 {
-  "updated": "2026-02-23T11:53:01+08:00",
+  "updated": "2026-02-23T12:30:28+08:00",
   "alerts": [],
   "contexts": [
     {
@@ -8,7 +8,7 @@
     },
     {
       "name": "Monday webchat",
-      "pct": 44.2
+      "pct": 45.1
     },
     {
       "name": "Monday 会议室",
@@ -241,7 +241,7 @@
     "agents": "3 (Coder+Echo+Monday)",
     "channels": "Discord",
     "cronFails": 0,
-    "lastBackup": "0h 前 ✅",
+    "lastBackup": "1h 前 ✅",
     "sessionsSend": {
       "health": "idle",
       "windowHours": 24,
@@ -252,7 +252,7 @@
       "successRate": 0.0,
       "dropRate": 0.0,
       "queuePending": 0,
-      "lastAlert": "2026-02-23T03:52:01Z SUPPRESS REPORT total=0 ok=0 drop=0 invalid=0 success_rate=0.00% drop_rate=0.00% queue_pending=0 window_hours=24 reasons=success_rate=0.00%<98.00%;",
+      "lastAlert": "",
       "lastReplay": ""
     }
   },
