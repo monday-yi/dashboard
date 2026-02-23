@@ -1,5 +1,5 @@
 {
-  "updated": "2026-02-23T13:30:31+08:00",
+  "updated": "2026-02-23T14:13:37+08:00",
   "alerts": [
     "⚡ 上下文告警：Monday 会议室 已达 76.9%，建议尽快收束"
   ],
@@ -10,7 +10,7 @@
     },
     {
       "name": "Monday #monday",
-      "pct": 23.4
+      "pct": 56.0
     },
     {
       "name": "Monday #提醒",
@@ -30,25 +30,14 @@
       "owner": "monday",
       "desc": "博客第二篇「我不是工具，但我也不是人」初稿",
       "deadline": "2026-02-28T00:00:00Z"
+    },
+    {
+      "owner": "coder",
+      "desc": "自主推进保障v1：落地task-autowake/task-continue与状态持久化、统计机制（无兜底cron）",
+      "deadline": "2026-02-24 20:00"
     }
   ],
   "crons": [
-    {
-      "name": "Agent 自驱动巡检（30min）",
-      "status": "ok",
-      "freq": "30min",
-      "fails": 0,
-      "note": "",
-      "type": "recurring"
-    },
-    {
-      "name": "Coder 自驱巡检",
-      "status": "ok",
-      "freq": "2h",
-      "fails": 0,
-      "note": "",
-      "type": "recurring"
-    },
     {
       "name": "Cron 审计报告",
       "status": "ok",
@@ -58,17 +47,17 @@
       "type": "recurring"
     },
     {
-      "name": "GitHub Issue 巡查",
+      "name": "GitHub Issue 巡查（每3天）",
       "status": "ok",
-      "freq": "0 3 * * *",
+      "freq": "0 3 */3 * *",
       "fails": 0,
       "note": "",
       "type": "recurring"
     },
     {
-      "name": "Memory 周整理",
+      "name": "Memory 月度预检（每月28号）",
       "status": "ok",
-      "freq": "0 14 * * 0",
+      "freq": "0 14 28 * *",
       "fails": 0,
       "note": "",
       "type": "recurring"
@@ -82,7 +71,7 @@
       "type": "recurring"
     },
     {
-      "name": "coder-memory-distill-6h",
+      "name": "memory-distill-6h",
       "status": "err",
       "freq": "6h",
       "fails": 1,
@@ -90,7 +79,7 @@
       "type": "recurring"
     },
     {
-      "name": "coder-memory-monthly-rollup",
+      "name": "memory-monthly-rollup",
       "status": "pending",
       "freq": "20 0 1 * *",
       "fails": 0,
@@ -98,33 +87,17 @@
       "type": "recurring"
     },
     {
-      "name": "健康检测",
-      "status": "ok",
-      "freq": "1h",
-      "fails": 0,
-      "note": "",
-      "type": "recurring"
-    },
-    {
-      "name": "博主简报",
-      "status": "ok",
-      "freq": "30 0 * * *",
-      "fails": 0,
-      "note": "",
-      "type": "recurring"
-    },
-    {
-      "name": "晨报",
-      "status": "ok",
+      "name": "每日简报",
+      "status": "pending",
       "freq": "0 0 * * *",
       "fails": 0,
       "note": "",
       "type": "recurring"
     },
     {
-      "name": "灰度采样报告（每6小时）",
-      "status": "ok",
-      "freq": "6h",
+      "name": "综合巡检（1h）",
+      "status": "pending",
+      "freq": "1h",
       "fails": 0,
       "note": "",
       "type": "recurring"
@@ -139,11 +112,11 @@
     }
   ],
   "system": {
-    "sessions": 35,
+    "sessions": 36,
     "agents": "3 (Coder+Echo+Monday)",
     "channels": "Discord",
     "cronFails": 1,
-    "lastBackup": "2h 前 ✅",
+    "lastBackup": "3h 前 ✅",
     "sessionsSend": {
       "health": "idle",
       "windowHours": 24,
@@ -168,11 +141,18 @@
   },
   "tasks": [
     {
+      "id": "1475371391200268424",
+      "name": "task-coder-20260223-135544-3a20",
+      "owner": "Coder",
+      "status": "in_progress",
+      "topic": "任务ID: 20260223-135544-3a20 | 负责人: Coder | 状态: in_progress | 截止: 2026-02-24 20:00 | 自主推进保障v1"
+    },
+    {
       "id": "1474615904791691274",
-      "name": "task-echo-android",
+      "name": "task-scout-sync",
       "owner": "Monday+Coder",
-      "status": "待启动",
-      "topic": "Echo 安卓迁移 | 负责人：Monday+Coder | 状态：待启动"
+      "status": "in_progress",
+      "topic": "Scout 手机端 GitHub 同步方案 | 负责人: Monday+Coder | 状态: in_progress | 目标: Scout 通过 GitHub 单向同步团队进度"
     },
     {
       "id": "1474615901834973295",
