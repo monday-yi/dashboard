@@ -1,63 +1,53 @@
 {
-  "updated": "2026-02-23T08:02:50+08:00",
-  "alerts": [
-    "[sessions-send] health=degraded, success_rate=0.00%, queue_pending=0"
-  ],
+  "updated": "2026-02-23T08:31:59+08:00",
+  "alerts": [],
   "contexts": [
+    {
+      "name": "Monday 会议室",
+      "pct": 56.1
+    },
     {
       "name": "Monday #monday",
       "pct": 53.2
     },
     {
-      "name": "Monday 主会话",
-      "pct": 42.5
+      "name": "Monday webchat",
+      "pct": 43
     },
     {
       "name": "Monday #monday",
       "pct": 39.1
     },
     {
-      "name": "Monday 会议室",
-      "pct": 33.5
-    },
-    {
-      "name": "灰度采样报告",
-      "pct": 19.2
-    },
-    {
       "name": "Coder #coder",
       "pct": 17.3
     },
     {
-      "name": "博主简报",
-      "pct": 14.6
+      "name": "Echo 博主简报",
+      "pct": 14.9
     },
     {
-      "name": "Memory 周整理",
+      "name": "Echo 灰度采样报告",
+      "pct": 11.4
+    },
+    {
+      "name": "Echo Memory 周整理",
       "pct": 10.4
     },
     {
-      "name": "Cron 审计报告",
+      "name": "Echo Cron 审计报告",
       "pct": 9.5
     },
     {
-      "name": "晨报",
+      "name": "Echo 晨报",
       "pct": 8.6
     },
     {
-      "name": "Coder 自驱巡检",
-      "pct": 6.9
-    },
-    {
-      "name": "GitHub Issue 巡查",
+      "name": "Echo GitHub Issue 巡查",
       "pct": 6.6
     },
     {
-      "name": "Monday #monday",
-      "pct": 6.3
-    },
-    {
-      "name": "Phoenix 备份",
+      "name": "Echo Phoenix 备份",
       "pct": 6.1
     },
     {
@@ -65,20 +55,12 @@
       "pct": 5.9
     },
     {
-      "name": "discord:g-1472864942997635294",
+      "name": "Echo 承诺追踪巡检",
       "pct": 5.8
     },
     {
-      "name": "承诺追踪巡检",
+      "name": "Echo #monday",
       "pct": 5.8
-    },
-    {
-      "name": "Monday #monday",
-      "pct": 5.8
-    },
-    {
-      "name": "健康检测",
-      "pct": 5.6
     }
   ],
   "queue": [
@@ -194,8 +176,8 @@
       "successRate": 0,
       "dropRate": 0,
       "queuePending": 0,
-      "lastAlert": "2026-02-22T16:22:01Z ALERT REPORT total=0 ok=0 drop=0 invalid=0 success_rate=0.00% drop_rate=0.00% queue_pending=0 window_hours=24 reasons=success_rate=0.00%<98.00%;",
-      "lastReplay": "REPLAY_OK processed=0 ok=0 retry=0 dropped=0 skipped=0"
+      "lastAlert": "2026-02-23T00:30:28Z OK REPORT total=1 ok=0 drop=1 invalid=0 success_rate=0.00% drop_rate=100.00% queue_pending=0 window_hours=24",
+      "lastReplay": ""
     }
   },
   "upgrade": {
