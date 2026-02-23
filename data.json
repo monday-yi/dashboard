@@ -1,5 +1,5 @@
 {
-  "updated": "2026-02-23T07:30:41+08:00",
+  "updated": "2026-02-23T08:02:50+08:00",
   "alerts": [
     "[sessions-send] health=degraded, success_rate=0.00%, queue_pending=0"
   ],
@@ -9,11 +9,11 @@
       "pct": 53.2
     },
     {
-      "name": "Monday webchat",
-      "pct": 41.9
+      "name": "Monday 主会话",
+      "pct": 42.5
     },
     {
-      "name": "Monday #monday-2",
+      "name": "Monday #monday",
       "pct": 39.1
     },
     {
@@ -21,7 +21,7 @@
       "pct": 33.5
     },
     {
-      "name": "Coder 灰度采样报告",
+      "name": "灰度采样报告",
       "pct": 19.2
     },
     {
@@ -29,51 +29,35 @@
       "pct": 17.3
     },
     {
-      "name": "Echo 博主简报",
+      "name": "博主简报",
       "pct": 14.6
     },
     {
-      "name": "Echo Memory 周整理",
+      "name": "Memory 周整理",
       "pct": 10.4
     },
     {
-      "name": "Monday 日报",
-      "pct": 10.1
-    },
-    {
-      "name": "Coder #coder-2",
-      "pct": 9.7
-    },
-    {
-      "name": "Echo Cron 审计",
+      "name": "Cron 审计报告",
       "pct": 9.5
     },
     {
-      "name": "Echo 晨报",
-      "pct": 8.7
-    },
-    {
-      "name": "Echo coder-memory-distill",
-      "pct": 7.4
+      "name": "晨报",
+      "pct": 8.6
     },
     {
       "name": "Coder 自驱巡检",
-      "pct": 6.8
+      "pct": 6.9
     },
     {
-      "name": "Echo GitHub Issue 巡查",
+      "name": "GitHub Issue 巡查",
       "pct": 6.6
     },
     {
-      "name": "Coder #monday",
+      "name": "Monday #monday",
       "pct": 6.3
     },
     {
-      "name": "Coder 会议室",
-      "pct": 6.2
-    },
-    {
-      "name": "Echo Phoenix 备份",
+      "name": "Phoenix 备份",
       "pct": 6.1
     },
     {
@@ -81,15 +65,19 @@
       "pct": 5.9
     },
     {
-      "name": "Echo 会议室",
+      "name": "discord:g-1472864942997635294",
       "pct": 5.8
     },
     {
-      "name": "Echo #monday",
+      "name": "承诺追踪巡检",
       "pct": 5.8
     },
     {
-      "name": "Echo 健康检测",
+      "name": "Monday #monday",
+      "pct": 5.8
+    },
+    {
+      "name": "健康检测",
       "pct": 5.6
     }
   ],
