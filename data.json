@@ -1,5 +1,5 @@
 {
-  "updated": "2026-02-23T22:48:11+08:00",
+  "updated": "2026-02-23T23:47:26+08:00",
   "alerts": [],
   "contexts": [
     {
@@ -7,19 +7,23 @@
       "pct": 68.4
     },
     {
+      "name": "Monday #monday",
+      "pct": 45.6
+    },
+    {
       "name": "Monday ch:1475408341042987110",
       "pct": 40.8
     },
     {
       "name": "Monday 会议室",
-      "pct": 24.4
+      "pct": 27.4
+    },
+    {
+      "name": "Monday #echo",
+      "pct": 10.9
     },
     {
       "name": "Monday #提醒",
-      "pct": 10.0
-    },
-    {
-      "name": "Monday #monday",
       "pct": 10.0
     },
     {
@@ -121,11 +125,11 @@
     }
   ],
   "system": {
-    "sessions": 40,
+    "sessions": 37,
     "agents": "3 (Coder+Echo+Monday)",
     "channels": "Discord",
     "cronFails": 0,
-    "lastBackup": "0h 前 ✅",
+    "lastBackup": "1h 前 ✅",
     "sessionsSend": {
       "health": "idle",
       "windowHours": 24,
