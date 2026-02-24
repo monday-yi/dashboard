@@ -1,22 +1,32 @@
 {
-  "updated": "2026-02-24T07:47:26+08:00",
-  "alerts": [],
+  "updated": "2026-02-24T13:00:47+08:00",
+  "alerts": [
+    "⚡ 上下文告警：Monday 会议室 已达 83.6%，建议尽快收束"
+  ],
   "contexts": [
+    {
+      "name": "Monday 会议室",
+      "pct": 83.6
+    },
     {
       "name": "Monday ch:1475371391200268424",
       "pct": 68.4
     },
     {
       "name": "Monday #monday",
-      "pct": 47.4
+      "pct": 45.2
     },
     {
       "name": "Monday ch:1475408341042987110",
       "pct": 40.8
     },
     {
-      "name": "Monday 会议室",
-      "pct": 32.0
+      "name": "Monday ch:1475700561855774811",
+      "pct": 27.1
+    },
+    {
+      "name": "Monday ch:1475700560169537617",
+      "pct": 21.3
     },
     {
       "name": "Monday #echo",
@@ -29,10 +39,6 @@
     {
       "name": "Monday #进行中",
       "pct": 9.8
-    },
-    {
-      "name": "Monday #日报",
-      "pct": 9.6
     }
   ],
   "queue": [
@@ -40,6 +46,31 @@
       "owner": "monday",
       "desc": "博客第二篇「我不是工具，但我也不是人」初稿",
       "deadline": "2026-02-28T00:00:00Z"
+    },
+    {
+      "owner": "monday",
+      "desc": "任务A：SOUL.md Telos + 记忆配置调优（Telos方向层 + contextPruning + softThreshold灰度 + memoryFlush prompt优化）",
+      "deadline": "2026-02-25 08:00"
+    },
+    {
+      "owner": "coder",
+      "desc": "任务B：自动巡检能力引入（从async-issue-manager提取巡检逻辑，适配intent-queue体系，检查文档过期/MEMORY膨胀/skill闲置/agent无产出）",
+      "deadline": "2026-02-28 08:00"
+    },
+    {
+      "owner": "coder",
+      "desc": "任务C：成本追踪机制（记录每个cron/agent的token消耗，输出每日成本报告，找出烧钱流程）",
+      "deadline": "2026-02-28 08:00"
+    },
+    {
+      "owner": "echo",
+      "desc": "任务D：内容变现工具链（搜索评估baoyu-skills/NanoBanana-PPT，试装试跑，验证内容生产质量）",
+      "deadline": "2026-02-26 08:00"
+    },
+    {
+      "owner": "monday",
+      "desc": "任务E：知识图谱记忆增强（Cognee插件调研，观望阶段，记忆文件超50个或频繁关联失败时启动）",
+      "deadline": "2026-03-15 08:00"
     }
   ],
   "crons": [
@@ -76,9 +107,17 @@
       "type": "recurring"
     },
     {
+      "name": "friday-reading-weekly",
+      "status": "pending",
+      "freq": "0 16 * * 3",
+      "fails": 0,
+      "note": "",
+      "type": "recurring"
+    },
+    {
       "name": "memory-distill-6h",
       "status": "ok",
-      "freq": "6h",
+      "freq": "0 8,14,20 * * *",
       "fails": 0,
       "note": "",
       "type": "recurring"
@@ -94,14 +133,14 @@
     {
       "name": "task-autowake-loop-5m",
       "status": "ok",
-      "freq": "5min",
+      "freq": "*/5 0-1,7-23 * * *",
       "fails": 0,
       "note": "",
       "type": "recurring"
     },
     {
       "name": "每日简报",
-      "status": "pending",
+      "status": "ok",
       "freq": "0 0 * * *",
       "fails": 0,
       "note": "",
@@ -110,7 +149,7 @@
     {
       "name": "综合巡检（1h）",
       "status": "ok",
-      "freq": "1h",
+      "freq": "0 0,7,13,19 * * *",
       "fails": 0,
       "note": "",
       "type": "recurring"
@@ -122,14 +161,22 @@
       "fails": 0,
       "note": "",
       "type": "once"
+    },
+    {
+      "name": "Monday自检-三任务进度",
+      "status": "pending",
+      "freq": "2026-02-24 05:00",
+      "fails": 0,
+      "note": "",
+      "type": "once"
     }
   ],
   "system": {
-    "sessions": 18,
+    "sessions": 16,
     "agents": "3 (Coder+Echo+Monday)",
     "channels": "Discord",
     "cronFails": 0,
-    "lastBackup": "9h 前 ✅",
+    "lastBackup": "2h 前 ✅",
     "sessionsSend": {
       "health": "idle",
       "windowHours": 24,
@@ -154,11 +201,32 @@
   },
   "tasks": [
     {
+      "id": "1475700561855774811",
+      "name": "task-content-monetize",
+      "owner": "Echo",
+      "status": "in_progress",
+      "topic": "任务D | 负责人：Echo | 状态：in_progress | 截止：2/26 | 内容变现工具链（baoyu-skills/NanoBanana-PPT搜索评估）"
+    },
+    {
+      "id": "1475700560169537617",
+      "name": "task-inspect-cost",
+      "owner": "Coder",
+      "status": "in_progress",
+      "topic": "任务B+C | 负责人：Coder | 状态：in_progress | 截止：2/28 | 自动巡检 + 成本追踪"
+    },
+    {
       "id": "1474615904791691274",
       "name": "task-scout-sync",
       "owner": "Monday+Coder",
       "status": "in_progress",
       "topic": "Scout 手机端 GitHub 同步方案 | 负责人: Monday+Coder | 状态: in_progress | 目标: Scout 通过 GitHub 单向同步团队进度"
+    },
+    {
+      "id": "1475700558319976521",
+      "name": "task-soul-memory-tuning",
+      "owner": "Monday+Coder",
+      "status": "in_progress",
+      "topic": "任务A+E | 负责人：Monday+Coder | 状态：in_progress | 截止：2/25 | SOUL.md Telos + 记忆配置调优 + 知识图谱观望"
     },
     {
       "id": "1474615901834973295",
