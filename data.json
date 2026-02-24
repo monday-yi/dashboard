@@ -1,36 +1,38 @@
 {
-  "updated": "2026-02-24T13:00:47+08:00",
-  "alerts": [
-    "⚡ 上下文告警：Monday 会议室 已达 83.6%，建议尽快收束"
-  ],
+  "updated": "2026-02-24T19:00:38+08:00",
+  "alerts": [],
   "contexts": [
-    {
-      "name": "Monday 会议室",
-      "pct": 83.6
-    },
     {
       "name": "Monday ch:1475371391200268424",
       "pct": 68.4
     },
     {
-      "name": "Monday #monday",
-      "pct": 45.2
+      "name": "Monday ch:1475700561855774811",
+      "pct": 47.0
     },
     {
       "name": "Monday ch:1475408341042987110",
       "pct": 40.8
     },
     {
-      "name": "Monday ch:1475700561855774811",
-      "pct": 27.1
-    },
-    {
       "name": "Monday ch:1475700560169537617",
-      "pct": 21.3
+      "pct": 37.2
     },
     {
-      "name": "Monday #echo",
-      "pct": 11.3
+      "name": "Monday #monday",
+      "pct": 19.8
+    },
+    {
+      "name": "Monday ch:1475700558319976521",
+      "pct": 13.9
+    },
+    {
+      "name": "Monday ch:1474615904791691274",
+      "pct": 11.1
+    },
+    {
+      "name": "Monday other",
+      "pct": 10.4
     },
     {
       "name": "Monday #提醒",
@@ -49,28 +51,13 @@
     },
     {
       "owner": "monday",
-      "desc": "任务A：SOUL.md Telos + 记忆配置调优（Telos方向层 + contextPruning + softThreshold灰度 + memoryFlush prompt优化）",
-      "deadline": "2026-02-25 08:00"
-    },
-    {
-      "owner": "coder",
-      "desc": "任务B：自动巡检能力引入（从async-issue-manager提取巡检逻辑，适配intent-queue体系，检查文档过期/MEMORY膨胀/skill闲置/agent无产出）",
-      "deadline": "2026-02-28 08:00"
-    },
-    {
-      "owner": "coder",
-      "desc": "任务C：成本追踪机制（记录每个cron/agent的token消耗，输出每日成本报告，找出烧钱流程）",
-      "deadline": "2026-02-28 08:00"
-    },
-    {
-      "owner": "echo",
-      "desc": "任务D：内容变现工具链（搜索评估baoyu-skills/NanoBanana-PPT，试装试跑，验证内容生产质量）",
-      "deadline": "2026-02-26 08:00"
-    },
-    {
-      "owner": "monday",
       "desc": "任务E：知识图谱记忆增强（Cognee插件调研，观望阶段，记忆文件超50个或频繁关联失败时启动）",
       "deadline": "2026-03-15 08:00"
+    },
+    {
+      "owner": "coder",
+      "desc": "记忆系统优化：挂蒸馏/月度cron + 写过期清理脚本 + distill升级LLM版 + 搜索加时间衰减",
+      "deadline": "2026-02-26"
     }
   ],
   "crons": [
@@ -131,9 +118,9 @@
       "type": "recurring"
     },
     {
-      "name": "task-autowake-loop-5m",
-      "status": "ok",
-      "freq": "*/5 0-1,7-23 * * *",
+      "name": "任务E-记忆文件数量周检",
+      "status": "pending",
+      "freq": "0 2 * * 1",
       "fails": 0,
       "note": "",
       "type": "recurring"
@@ -163,20 +150,20 @@
       "type": "once"
     },
     {
-      "name": "Monday自检-三任务进度",
+      "name": "任务E知识图谱评估提醒-3/15",
       "status": "pending",
-      "freq": "2026-02-24 05:00",
+      "freq": "2026-03-14 16:00",
       "fails": 0,
       "note": "",
       "type": "once"
     }
   ],
   "system": {
-    "sessions": 16,
+    "sessions": 19,
     "agents": "3 (Coder+Echo+Monday)",
-    "channels": "Discord",
+    "channels": "Discord + Telegram",
     "cronFails": 0,
-    "lastBackup": "2h 前 ✅",
+    "lastBackup": "8h 前 ✅",
     "sessionsSend": {
       "health": "idle",
       "windowHours": 24,
@@ -200,20 +187,6 @@
     "deferred": "插件冲突治理"
   },
   "tasks": [
-    {
-      "id": "1475700561855774811",
-      "name": "task-content-monetize",
-      "owner": "Echo",
-      "status": "in_progress",
-      "topic": "任务D | 负责人：Echo | 状态：in_progress | 截止：2/26 | 内容变现工具链（baoyu-skills/NanoBanana-PPT搜索评估）"
-    },
-    {
-      "id": "1475700560169537617",
-      "name": "task-inspect-cost",
-      "owner": "Coder",
-      "status": "in_progress",
-      "topic": "任务B+C | 负责人：Coder | 状态：in_progress | 截止：2/28 | 自动巡检 + 成本追踪"
-    },
     {
       "id": "1474615904791691274",
       "name": "task-scout-sync",
