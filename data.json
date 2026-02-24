@@ -1,10 +1,10 @@
 {
-  "updated": "2026-02-25T00:00:32+08:00",
+  "updated": "2026-02-25T07:00:28+08:00",
   "alerts": [],
   "contexts": [
     {
       "name": "Monday #monday",
-      "pct": 65.2
+      "pct": 49.1
     },
     {
       "name": "Monday ch:1475700561855774811",
@@ -13,6 +13,10 @@
     {
       "name": "Monday ch:1475700560169537617",
       "pct": 37.2
+    },
+    {
+      "name": "Monday ch:1475885183965335713",
+      "pct": 21.8
     },
     {
       "name": "Monday ch:1475700558319976521",
@@ -147,11 +151,11 @@
     }
   ],
   "system": {
-    "sessions": 26,
+    "sessions": 25,
     "agents": "3 (Coder+Echo+Monday)",
     "channels": "Discord + Telegram",
     "cronFails": 0,
-    "lastBackup": "1h 前 ✅",
+    "lastBackup": "8h 前 ✅",
     "sessionsSend": {
       "health": "idle",
       "windowHours": 24,
